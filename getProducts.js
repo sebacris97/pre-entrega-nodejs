@@ -9,7 +9,7 @@ function getProducts(argv3) {
             .catch(err => console.error("Error:", err.message));
     } else if (argv3.startsWith("products/")) {
 	//me guardo el id
-        const productId = endpoint.split("/")[1];
+        const productId = argv3.split("/")[1];
 
         fetch(`${SITE}/${productId}`)
             .then(response => {
